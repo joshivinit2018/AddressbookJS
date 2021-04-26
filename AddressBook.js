@@ -176,7 +176,7 @@ class AddressBook{
          "Chaugule",
          "Shreenagaar",
          "Panaji",
-         "Goa",
+         "Karnataka",
          "891 258",
          "87 9876543210",
          "neha33@gmail.com"
@@ -209,6 +209,13 @@ class AddressBook{
      //displaying contacts after being updated
      console.log("----------------------After Changing Zip Updated Contacts are------------------------------------");
      ContactsArray.forEach((contact_book) => console.log(contact_book.toString()));
+
+     let check1 = ContactsArray.findIndex((contact_book) => contact_book.firstName == "Vinit");
+     ContactsArray.splice(check1, 1);
+     console.log("----------------------Contacts after Being Deleted from the array---------------------------------");
+     ContactsArray.forEach((contact_book) => console.log(contact_book.toString()));   
+
+
    } catch (e) 
    {
      console.log(e);
