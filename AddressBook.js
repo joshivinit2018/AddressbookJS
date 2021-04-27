@@ -268,15 +268,23 @@ else
 let addresscityMap = ContactsArray.map(CityMap);
 console.log(addresscityMap);
 
-//by city
+// uc10 by city
 function StateMap(Details) 
 {
   return Details.state + "     " + Details.firstName + "     " + Details.lastName;
 }
 let addressStateMap = ContactsArray.map(StateMap);
 console.log(addressStateMap);
+//uc11 To Sort the Enteries in the address book alphabetically by persons name
+
+console.log("-------------Sorting by FirstName-----------");
+for (let contactDetails in ContactsArray)
+{
+  ContactsArray.sort(contactDetails.firstName);
+}
+ContactsArray.forEach((contact) => console.log(contact.toString()));
 }
 catch (e) 
 {
-console.log(e);
+  console.log(e);
 }
